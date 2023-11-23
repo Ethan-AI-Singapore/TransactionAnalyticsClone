@@ -1,67 +1,70 @@
 import express from "express";
 import bodyParser from "body-parser";
 import cors from "cors";
-
+import {
+  RELATIVE_PERFORMANCE_NETWORTH,
+  RELATIVE_PERFORMANCE_STOCKS,
+  GROSS_ALLOCATION_NETWORTH,
+  GROSS_ALLOCATION_PL_HISTORY,
+  GROSS_ALLOCATION,
+  RELATIVE_PERFORMANCE_ASSET_CLASS,
+  SECURITY_SEARCH,
+} from "./analytics_mock_data.js";
 const app = express();
 const PORT = 8000;
 
 app.use(bodyParser.json());
 app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
 
 // Analytics Endpoints
-app.post("/api/v1/relative-performance/networth/", (req, res) => {
+app.post("/relative-performance/networth/", (req, res) => {
   const { asset_class, client_id, custodian_id, start_date, end_date } =
     req.body;
-  return res.json({ client_id });
+  return res.json(RELATIVE_PERFORMANCE_NETWORTH);
 });
 
-app.post("/api/v1/relative-performance/stocks/", (req, res) => {
+app.post("/relative-performance/stocks/", (req, res) => {
   const { client_id, custodian_id, start_date, end_date } = req.body;
-  return res.json({ client_id });
+  return res.json(RELATIVE_PERFORMANCE_STOCKS);
 });
 
-app.post("/api/v1/gross-allocation/networth/", (req, res) => {
+app.post("/gross-allocation/networth/", (req, res) => {
   const { client_id, custodian_id, start_date, end_date } = req.body;
-  return res.json({ client_id });
+  return res.json(GROSS_ALLOCATION_NETWORTH);
 });
 
-app.post("/api/v1/gross-allocation/pl-history/", (req, res) => {
+app.post("/gross-allocation/pl-history/", (req, res) => {
   const { client_id, custodian_id, start_date, end_date } = req.body;
-  return res.json({ client_id });
+  return res.json(GROSS_ALLOCATION_PL_HISTORY);
 });
 
-app.post("/api/v1/gross-allocation/", (req, res) => {
+app.post("/gross-allocation/", (req, res) => {
   const { client_id, custodian_id, start_date, end_date } = req.body;
-  return res.json({ client_id });
+  return res.json(GROSS_ALLOCATION);
 });
 
-app.get("/api/v1/relative-performance/asset-class/", (req, res) => {
+app.get("/relative-performance/asset-class/", (req, res) => {
   const { client_id } = req.query;
-  return res.json({ client_id });
+  return res.json(RELATIVE_PERFORMANCE_ASSET_CLASS);
 });
 
-app.get("/api/v1/security/search/", (req, res) => {
+app.get("/security/search/", (req, res) => {
   const { query } = req.query;
-  return res.json({ query });
+  return res.json(SECURITY_SEARCH);
 });
-
-
-
 
 // Transaction API
-app.get("/api/position/history/top_gainer/", (req, res) => {
+app.get("/position/history/top_gainer/", (req, res) => {
   const { start_date, end_date, client } = req.query;
   return res.json({ start_date, end_date, client });
 });
 
-app.get("/api/statement/position/networth_cards/", (req, res) => {
+app.get("/statement/position/networth_cards/", (req, res) => {
   const { report_date } = req.query;
   return res.json({ report_date });
 });
 
-app.get("/api/custodian", (req, res) => {
+app.get("/custodian", (req, res) => {
   const { client__id } = req.query;
   return res.json({ client__id });
 });
