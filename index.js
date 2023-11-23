@@ -20,17 +20,17 @@ app.post("/api/v1/relative-performance/stocks/", (req, res) => {
   return res.json({ client_id });
 });
 
-app.post("api/v1/gross-allocation/networth/", (req, res) => {
+app.post("/api/v1/gross-allocation/networth/", (req, res) => {
   const { client_id, custodian_id, start_date, end_date } = req.body;
   return res.json({ client_id });
 });
 
-app.post("api/v1/gross-allocation/pl-history/", (req, res) => {
+app.post("/api/v1/gross-allocation/pl-history/", (req, res) => {
   const { client_id, custodian_id, start_date, end_date } = req.body;
   return res.json({ client_id });
 });
 
-app.post("api/v1/gross-allocation/", (req, res) => {
+app.post("/api/v1/gross-allocation/", (req, res) => {
   const { client_id, custodian_id, start_date, end_date } = req.body;
   return res.json({ client_id });
 });
