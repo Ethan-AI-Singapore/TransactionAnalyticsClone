@@ -7,6 +7,8 @@ const PORT = 8000;
 
 app.use(bodyParser.json());
 app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 // Analytics Endpoints
 app.post("/api/v1/relative-performance/networth/", (req, res) => {
@@ -36,12 +38,12 @@ app.post("/api/v1/gross-allocation/", (req, res) => {
 });
 
 app.get("/api/v1/relative-performance/asset-class/", (req, res) => {
-  const { client_id } = req.params;
+  const { client_id } = req.query;
   return res.json({ client_id });
 });
 
 app.get("/api/v1/security/search/", (req, res) => {
-  const { query } = req.params;
+  const { query } = req.query;
   return res.json({ query });
 });
 
@@ -50,17 +52,17 @@ app.get("/api/v1/security/search/", (req, res) => {
 
 // Transaction API
 app.get("/api/position/history/top_gainer/", (req, res) => {
-  const { start_date, end_date, client } = req.params;
+  const { start_date, end_date, client } = req.query;
   return res.json({ start_date, end_date, client });
 });
 
 app.get("/api/statement/position/networth_cards/", (req, res) => {
-  const { report_date } = req.params;
+  const { report_date } = req.query;
   return res.json({ report_date });
 });
 
 app.get("/api/custodian", (req, res) => {
-  const { client__id } = req.params;
+  const { client__id } = req.query;
   return res.json({ client__id });
 });
 
