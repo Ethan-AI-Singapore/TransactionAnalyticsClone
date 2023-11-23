@@ -1,0 +1,19 @@
+version: '3'
+services:
+  nodejs-app:
+    build:
+      context: .
+    ports:
+      - "8000:8000"
+  traefik:
+    build:
+      context: ./traefik
+    volumes:
+      - production_traefik:/etc/traefik/acme:z
+    restart: always
+    ports:
+      - "0.0.0.0:80:80"
+      - "0.0.0.0:443:443"
+
+volumes:
+  production_traefik: {}  
