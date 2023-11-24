@@ -10,6 +10,12 @@ import {
   RELATIVE_PERFORMANCE_ASSET_CLASS,
   SECURITY_SEARCH,
 } from "./analytics_mock_data.js";
+import {
+  CUSTODIAN,
+  POSITION_HISTORY_TOP_GAINER,
+  POSITION_NETWORTH_CARDS,
+} from "./transactions_mock_data.js";
+
 const app = express();
 const PORT = 8000;
 
@@ -56,17 +62,17 @@ app.get("/security/search/", (req, res) => {
 // Transaction API
 app.get("/position/history/top_gainer/", (req, res) => {
   const { start_date, end_date, client } = req.query;
-  return res.json({ start_date, end_date, client });
+  return res.json(POSITION_HISTORY_TOP_GAINER);
 });
 
 app.get("/statement/position/networth_cards/", (req, res) => {
   const { report_date } = req.query;
-  return res.json({ report_date });
+  return res.json(POSITION_NETWORTH_CARDS);
 });
 
 app.get("/custodian", (req, res) => {
   const { client__id } = req.query;
-  return res.json({ client__id });
+  return res.json(CUSTODIAN);
 });
 
 app.get("/", (req, res) => {

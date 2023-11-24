@@ -14743,8 +14743,6 @@ export const GROSS_ALLOCATION_PL_HISTORY = [
 export const GROSS_ALLOCATION = [
   {
     title: "Gross Allocation by asset class",
-    x_label: null,
-    y_label: null,
     data: [
       {
         type: "Equity & Equivalents",
@@ -14813,8 +14811,6 @@ export const GROSS_ALLOCATION = [
   },
   {
     title: "Gross Allocation by industry",
-    x_label: null,
-    y_label: null,
     data: [
       {
         type: "Others",
@@ -22338,9 +22334,40 @@ export const RELATIVE_PERFORMANCE_NETWORTH = [
   },
 ];
 
-export const RELATIVE_PERFORMANCE_STOCKS = {
-  title: "Relative performance of stocks over time",
-  x_label: "Date",
-  y_label: "Price",
-  data: [],
-};
+export const RELATIVE_PERFORMANCE_STOCKS = [
+  {
+    x: "2023-10-11",
+    y: 327.82,
+    z: "META",
+  },
+  {
+    x: "2023-10-12",
+    y: 324.16,
+    z: "META",
+  },
+  {
+    x: "2023-10-13",
+    y: 314.69,
+    z: "META",
+  },
+  {
+    x: "2023-10-16",
+    y: 321.15,
+    z: "META",
+  },
+  {
+    x: "2023-10-17",
+    y: 324.0,
+    z: "META",
+  },
+  {
+    x: "2023-10-18",
+    y: 316.97,
+    z: "META",
+  },
+  {
+    x: "2023-10-19",
+    y: 312.81,
+    z: "META",
+  },
+];
