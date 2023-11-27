@@ -1,6 +1,6 @@
 export const POSITION_HISTORY_TOP_GAINER = [
   {
-    client_name: "PR_SA",
+    client_name: "AB_CD",
     security_id: "YYR.SI",
     isin: "SGXC42834322",
     security_description: "Lion-OCBC Securities China Leaders ETF",
@@ -8,7 +8,7 @@ export const POSITION_HISTORY_TOP_GAINER = [
     percentage_profit_loss: 76.72575353370364,
   },
   {
-    client_name: "PR_SA",
+    client_name: "AB_CD",
     security_id: "0P00006ONO.SI",
     isin: "SG9999002083",
     security_description:
@@ -17,7 +17,7 @@ export const POSITION_HISTORY_TOP_GAINER = [
     percentage_profit_loss: 8.441835318153109,
   },
   {
-    client_name: "PR_SA",
+    client_name: "AB_CD",
     security_id: "SPY",
     isin: "US78462F1030",
     security_description: "SPDR S&P 500 ETF Trust",
@@ -25,7 +25,7 @@ export const POSITION_HISTORY_TOP_GAINER = [
     percentage_profit_loss: 4.935181899971848,
   },
   {
-    client_name: "PR_SA",
+    client_name: "AB_CD",
     security_id: "PDD",
     isin: "US7223041028",
     security_description: "Pinduoduo",
@@ -33,7 +33,7 @@ export const POSITION_HISTORY_TOP_GAINER = [
     percentage_profit_loss: 1.9223184891215133,
   },
   {
-    client_name: "PR_SA",
+    client_name: "AB_CD",
     security_id: "C52.SI",
     isin: "SG1N31909426",
     security_description: "ComfortDelGro Corporation Limited",
@@ -49,7 +49,7 @@ export const POSITION_HISTORY_TOP_GAINER = [
     percentage_profit_loss: 1.1125658836051873,
   },
   {
-    client_name: "PR_SA",
+    client_name: "AB_CD",
     security_id: "SOXX",
     isin: "US4642875235",
     security_description: "iShares Semiconductor ETF",
@@ -57,7 +57,7 @@ export const POSITION_HISTORY_TOP_GAINER = [
     percentage_profit_loss: 1.0642807284328761,
   },
   {
-    client_name: "PR_SA",
+    client_name: "AB_CD",
     security_id: "XLC",
     isin: "US81369Y8527",
     security_description: "Communication Services Select Sector SPDR® Fund",
@@ -65,7 +65,7 @@ export const POSITION_HISTORY_TOP_GAINER = [
     percentage_profit_loss: 1.0306856091197847,
   },
   {
-    client_name: "PR_SA",
+    client_name: "AB_CD",
     security_id: "SKYY",
     isin: "US33734X1928",
     security_description: "First Trust Cloud Computing ETF",
@@ -73,7 +73,7 @@ export const POSITION_HISTORY_TOP_GAINER = [
     percentage_profit_loss: 0.9263146423425646,
   },
   {
-    client_name: "PR_SA",
+    client_name: "AC_CD",
     security_id: "XS1602127992",
     isin: "XS1602127992",
     security_description:
@@ -87,7 +87,7 @@ export const POSITION_NETWORTH_CARDS = {
   client_cards: [
     {
       client_id: "dda49fb1-4172-4dc3-bbe0-97e9e6cbb873",
-      client_name: "KP_CM",
+      client_name: "AB_CD",
       assets: 4044107.94,
       liabilities: -922693.62,
       networth: 3121414.32,
@@ -95,7 +95,7 @@ export const POSITION_NETWORTH_CARDS = {
     },
     {
       client_id: "da213056-a906-4edb-a865-732397b5f2b9",
-      client_name: "PR_SA",
+      client_name: "CD_AS",
       assets: 2659907.48,
       liabilities: 0.0,
       networth: 2659907.48,
@@ -103,7 +103,7 @@ export const POSITION_NETWORTH_CARDS = {
     },
     {
       client_id: "1c2b49d9-cbbe-4f78-ba55-322f55209e82",
-      client_name: "AK_NK",
+      client_name: "CD_AS",
       assets: 4784635.95,
       liabilities: 0.0,
       networth: 4784635.95,
@@ -111,7 +111,7 @@ export const POSITION_NETWORTH_CARDS = {
     },
     {
       client_id: "637fbb50-d59d-467d-b61d-f99aa897b960",
-      client_name: "TT_SS",
+      client_name: "AA_BB",
       assets: 3708568.71,
       liabilities: -843038.12,
       networth: 2865530.59,
@@ -119,7 +119,7 @@ export const POSITION_NETWORTH_CARDS = {
     },
     {
       client_id: "72a90d66-dbce-47b1-8044-01b6b430f9f2",
-      client_name: "CA_TA",
+      client_name: "QW_ER",
       assets: 1276397.06,
       liabilities: 0.0,
       networth: 1276397.06,
@@ -135,7 +135,7 @@ export const POSITION_NETWORTH_CARDS = {
     },
     {
       client_id: "7f4687fc-2891-44b5-bf4f-39510a3cfe0a",
-      client_name: "PK_SC",
+      client_name: "AS_DF",
       assets: 7947369.91,
       liabilities: 0.0,
       networth: 7947369.91,
@@ -143,7 +143,7 @@ export const POSITION_NETWORTH_CARDS = {
     },
     {
       client_id: "645a5825-19f4-4591-b5a3-2b1c09e1002c",
-      client_name: "MK_GM",
+      client_name: "ZX_CV",
       assets: 96376.85,
       liabilities: 0.0,
       networth: 96376.85,
