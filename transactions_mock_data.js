@@ -1,3 +1,7 @@
+export const POSITION_HISTORY_ASSET_CLASS = []
+export const POSITION_HISTORY_COUNTRY = []
+export const POSITION_HISTORY_SUB_INDUSTRY = []
+
 export const POSITION_HISTORY_TOP_GAINER = [
   {
     client_name: "AB_CD",

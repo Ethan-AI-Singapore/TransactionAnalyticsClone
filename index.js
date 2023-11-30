@@ -14,6 +14,9 @@ import {
   CUSTODIAN,
   POSITION_HISTORY_TOP_GAINER,
   POSITION_NETWORTH_CARDS,
+  POSITION_HISTORY_ASSET_CLASS,
+  POSITION_HISTORY_COUNTRY,
+  POSITION_HISTORY_SUB_INDUSTRY,
 } from "./transactions_mock_data.js";
 
 const app = express();
@@ -60,6 +63,24 @@ app.get("/security/search/", (req, res) => {
 });
 
 // Transaction API
+app.get("/position/history", (req, res) => {
+  const {
+    asset_class,
+    security__country_name,
+    security__sub_industry,
+    client,
+    custodian,
+    report_date,
+  } = req.query;
+  if (asset_class) {
+    return res.json(POSITION_HISTORY_ASSET_CLASS);
+  } else if (security__country_name) {
+    return res.json(POSITION_HISTORY_COUNTRY);
+  } else {
+    return res.json(POSITION_HISTORY_SUB_INDUSTRY);
+  }
+});
+
 app.get("/position/history/top_gainer/", (req, res) => {
   const { start_date, end_date, client } = req.query;
   return res.json(POSITION_HISTORY_TOP_GAINER);
