@@ -1,5 +1,9 @@
 ### API Documentation
 
+### Base URL
+
+`https://demo-transaction.ethan-ai.com/`
+
 #### Analytics Endpoints
 
 1. **Relative Performance - Networth**
