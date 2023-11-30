@@ -152,7 +152,68 @@
 
 #### Transaction API
 
-8. **Position History - Top Gainer**
+8. **Position History - PieChart**
+
+   - Method Type: GET
+   - Endpoint: `/position/history/`
+   - Required Parameters:
+
+     - `asset_class` (string): Filter by asset class.
+     - `security__country_name` (string): Filter by security country name.
+     - `security__sub_industry` (string): Filter by security sub-industry.
+     - `client` (string): The client identifier.
+     - `custodian` (string): Filter by custodian.
+     - `report_date` (string): Filter by report date.
+
+   - Expected Response Type:
+   - Array of Objects with the following structure:
+     ```javascript
+     {
+       count: number,
+       next: string | null,
+       previous: string | null,
+       results: [
+         {
+           id: string,
+           custodian_name: string,
+           client_name: string,
+           security_name: string,
+           isin: string,
+           quantity: number,
+           average_price: number,
+           currency: string,
+           mtm_price: number,
+           asset_class: string,
+           unrealised_pl: number,
+           client: string,
+           custodian: string,
+           security: string,
+           relationship_number: string,
+           market_value: number,
+           description: string,
+           unrealised_pl_reporting: string,
+           market_value_reporting: string,
+           currency_reporting: string,
+           related_positions: [
+             {
+               id: string,
+               custodian_name: string,
+               relationship_number: number,
+               quantity: number,
+               average_price: number,
+               mtm_price: number,
+               market_value: number,
+               unrealised_pl: number,
+             },
+             // Additional related positions...
+           ],
+         },
+         // Additional position history items...
+       ];
+     }
+     ```
+
+9. **Position History - Top Gainer**
 
    - Method Type: GET
    - Endpoint: `/position/history/top_gainer/`
@@ -177,38 +238,38 @@
      ];
      ```
 
-9. **Statement - Position Networth Cards**
+10. **Statement - Position Networth Cards**
 
-   - Method Type: GET
-   - Endpoint: `/statement/position/networth_cards/`
-   - Required Parameter:
-     - `report_date` (string)
-   - Expected Response Type:
-   - Array of Objects with the following structure:
-     ```javascript
-       {
-       client_cards: [
-           {
-           client_id: "string",       // Unique identifier for the client
-           client_name: "string",     // Name of the client
-           assets: number,            // Total assets for the client
-           liabilities: number,       // Total liabilities for the client
-           networth: number,          // Net worth for the client (assets - liabilities)
-           currency: "string",        // Currency of the values (e.g., "SGD")
-           },
-           // Additional client cards...
-       ],
-       company_card: {
-           client_name: "string",       // Name of the company
-           assets: number,              // Total assets for the company
-           liabilities: number,         // Total liabilities for the company
-           networth: number,            // Net worth for the company (assets - liabilities)
-           currency: "string",          // Currency of the values (e.g., "SGD")
-       },
-       }
-     ```
+- Method Type: GET
+- Endpoint: `/statement/position/networth_cards/`
+- Required Parameter:
+  - `report_date` (string)
+- Expected Response Type:
+- Array of Objects with the following structure:
+  ```javascript
+    {
+    client_cards: [
+        {
+        client_id: "string",       // Unique identifier for the client
+        client_name: "string",     // Name of the client
+        assets: number,            // Total assets for the client
+        liabilities: number,       // Total liabilities for the client
+        networth: number,          // Net worth for the client (assets - liabilities)
+        currency: "string",        // Currency of the values (e.g., "SGD")
+        },
+        // Additional client cards...
+    ],
+    company_card: {
+        client_name: "string",       // Name of the company
+        assets: number,              // Total assets for the company
+        liabilities: number,         // Total liabilities for the company
+        networth: number,            // Net worth for the company (assets - liabilities)
+        currency: "string",          // Currency of the values (e.g., "SGD")
+    },
+    }
+  ```
 
-10. **Custodian**
+11. **Custodian**
     - Method Type: GET
     - Endpoint: `/custodian`
     - Required Parameter:
