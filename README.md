@@ -125,7 +125,7 @@
 
    - Method Type: GET
    - Endpoint: `/relative-performance/asset-class/`
-   - Required Parameter:
+   - Query Parameter:
      - `client_id` (string)
    - Expected Response Type:
    - Array of Objects with the following structure:
@@ -139,7 +139,7 @@
 7. **Security Search**
    - Method Type: GET
    - Endpoint: `/security/search/`
-   - Required Parameter:
+   - Query Parameter:
      - `query` (string)
    - Expected Response Type:
    - Array of Objects with the following structure:
@@ -242,7 +242,7 @@
 
 - Method Type: GET
 - Endpoint: `/statement/position/networth_cards/`
-- Required Parameter:
+- Query Parameter:
   - `report_date` (string)
 - Expected Response Type:
 - Array of Objects with the following structure:
@@ -272,7 +272,7 @@
 11. **Custodian**
     - Method Type: GET
     - Endpoint: `/custodian`
-    - Required Parameter:
+    - Query Parameter:
       - `client__id` (string)
     - Expected Response Type:
     - Array of Objects with the following structure:
