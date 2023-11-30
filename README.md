@@ -29,7 +29,7 @@
    - Endpoint: `/relative-performance/stocks/`
    - Required Body:
      - `client_id` (string)
-     - `custodian_id` (string)
+     - `security_id` (List[string]) // optional parameter, we can populate this from the ticker dropdown.
      - `start_date` (string)
      - `end_date` (string)
    - Expected Response Type:
