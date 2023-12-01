@@ -17,6 +17,7 @@ import {
   POSITION_HISTORY_ASSET_CLASS,
   POSITION_HISTORY_COUNTRY,
   POSITION_HISTORY_SUB_INDUSTRY,
+  POSITION_HISTORY_SECURITY_DETAILS,
 } from "./transactions_mock_data.js";
 
 const app = express();
@@ -84,6 +85,11 @@ app.get("/position/history", (req, res) => {
 app.get("/position/history/top_gainer/", (req, res) => {
   const { start_date, end_date, client } = req.query;
   return res.json(POSITION_HISTORY_TOP_GAINER);
+});
+
+app.get("/position/history/security_details/", (req, res) => {
+  const { report_date } = req.query;
+  return res.json(POSITION_HISTORY_SECURITY_DETAILS);
 });
 
 app.get("/statement/position/networth_cards/", (req, res) => {
