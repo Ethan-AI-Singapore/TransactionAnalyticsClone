@@ -29,7 +29,10 @@ app.use(cors());
 app.post("/relative-performance/networth/", (req, res) => {
   const { asset_class, client_id, custodian_id, start_date, end_date } =
     req.body;
-  return res.json(RELATIVE_PERFORMANCE_NETWORTH);
+  const filteredData = RELATIVE_PERFORMANCE_NETWORTH.filter((item) => {
+    return asset_class.includes(item.z);
+  });
+  return res.json(filteredData);
 });
 
 app.post("/relative-performance/stocks/", (req, res) => {
