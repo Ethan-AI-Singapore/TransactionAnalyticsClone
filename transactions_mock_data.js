@@ -1,4 +1,4 @@
-export const POSITION_HISTORY_ASSET_CLASS = [       {
+export const POSITION_HISTORY_ASSET_CLASS = [{
   "id": "c5536e3d-d9e6-44db-8bdd-06debe559f36",
   "market_value": 31889.7,
   "custodian_name": "DBS Singapore",
